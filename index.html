@@ -45,7 +45,7 @@
                         </li>
                     </ul>
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
                             <a href="" class="header__navbar-item-link">
                                 <i class="header__navbar-icon far fa-bell"></i>
                                 Thông báo
@@ -60,7 +60,7 @@
                                         <a href="" class="header__notify-link">
                                             <img src="./assets/imgs/notify.jpg" alt="" class="header__notify-img">
                                             <div class="header__notify-info">
-                                                <span class="header__notify-name">Chỉ còn 3 phút để hiểu nhau hơn</span>
+                                                <span class="header__notify-name">Hello welcome to our website hơn</span>
                                                 <span class="header__notify-des">Quảng cáo của shopee đã để lại cho bạn ấn tượng gì?</span>
                                             </div>
                                         </a>
@@ -69,7 +69,7 @@
                                         <a href="" class="header__notify-link">
                                             <img src="./assets/imgs/notify.jpg" alt="" class="header__notify-img">
                                             <div class="header__notify-info">
-                                                <span class="header__notify-name">Chỉ còn 3 phút để hiểu nhau hơn</span>
+                                                <span class="header__notify-name">Chỉ còn 3 phút để hiểu nhau hơn viết them cho nó đủ dài xem nó như thế nào</span>
                                                 <span class="header__notify-des">Quảng cáo của shopee đã để lại cho bạn ấn tượng gì?</span>
                                             </div>
                                         </a>
@@ -108,6 +108,59 @@
         <footer class="footer">
 
         </footer>
+    </div>
+    <!-- modal layout -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- Authen form  -->
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">
+                            Đăng ký
+                        </h3>
+                        <span class="auth-form__switch-btn">Đăng nhập</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="nhập lại mật khẩu">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng ký bạn đã đồng ý với shopee về
+                            <a href="" class="auth-form__text-link">điều khoản dịch vụ</a> & 
+                            <a href="" class="auth-form__text-link">chính sách bảo mật</a>
+                        </p>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÝ</button>   
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="btn btn--with-icon">
+                        <i class="fab fa-facebook-square"></i>
+                        kết nối với Facebook
+                    </a>
+                    <a href="" class="btn btn--with-icon">
+                        <i class="fab fa-google"></i>
+                        kết nối với Google             
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
