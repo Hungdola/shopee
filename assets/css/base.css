@@ -91,7 +91,7 @@ frame, từng khung hình một */
 
 /* button style  */
 .btn{
-    min-width: 142px;
+    min-width: 120px;
     height: 36px;
     border: none;
     text-decoration: none;
