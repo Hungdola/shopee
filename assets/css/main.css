@@ -11,12 +11,91 @@
 .header__navbar-list{
     list-style: none;
     padding-left: 0;
-    margin-top: 4px 0 0 0;
+    display: flex;
+    align-items: center;
+    height: 1rem;
 }
 
 .header__navbar-item{
     margin: 0 8px;
     position: relative;
+}
+
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+}
+
+.header__navbar-user-img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.header__navbar-user-name{
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-user-menu{
+    position: absolute;
+    background-color: var(--white-color);
+    top: 100%;
+    padding-left: 0;
+    right: 0;
+    border-radius: 2px;
+    width: 150px;
+    z-index: 1;
+    box-shadow: 0 0 3px var(--text--color);
+    display: none;
+    transform-origin: calc(100% - 20px) top; /*di chuyển tâm của animation*/
+    animation: headerNotifyGrowth ease-in 0.2s;
+}
+
+.header__navbar-user-menu::after{
+    position: absolute;
+    display: block;
+    content: "";
+    border-color: transparent transparent var(--white-color) transparent;
+    border-width: 8px 8px;
+    border-style: solid;
+    top: -15.5px;
+    right: 27px;
+    z-index: 0;
+}
+
+.header__navbar-user-item{
+    list-style: none;
+    width: 100%;
+}
+
+.header__navbar-user-item a{
+    text-decoration: none;
+    color: var(--text--color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+    padding: 10px 16px;
+}
+
+.header__navbar-user-item a:first-child{
+    border-top-left-radius:2px ;
+    border-top-right-radius:2px ;
+}
+
+.header__navbar-user-item a:last-child{
+    border-bottom-left-radius:2px ;
+    border-bottom-right-radius:2px ;
+}
+
+.header__navbar-user-item a:hover{
+    background-color: #f7f1f1;
 }
 
 .header__navbar-item--has-qr:hover .header__qr{
@@ -29,8 +108,7 @@
 
 .header__navbar-item,
 .header__navbar-item-link{
-    display:inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;/*bỏ gạch chân */
     font-weight: 300;
@@ -139,6 +217,7 @@
     animation: headerNotifyGrowth ease-in 0.2s;
     will-change: opacity, transform; /*tối ưu chuyển động animation */
     display: none;
+    z-index: 1;
 }
 
 .header__notify::before{
