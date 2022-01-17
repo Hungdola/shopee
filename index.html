@@ -21,7 +21,7 @@
                             Vào cửa hàng bằng ứng dụng
                             <!-- header qr code  -->
                             <div class="header__qr">
-                                <img src="./assets/imgs/qr_code.png" alt="qr code" class="header__qr-img">
+                                <img src="./assets/imgs/hungdola.png" alt="qr code" class="header__qr-img">
                                 <div class="header__qr-apps">
                                     <a href="" class="header__qr-link">
                                         <img src="./assets/imgs/appstore.png" alt="google play" class="header__qr-download-img">
@@ -257,23 +257,66 @@
             </div>
         </header>
 
-        <div class="container">
-            <nav class="category">
-                <h3 class="categoty__heading">
-                    <i class="fas fa-list"></i>
-                    Danh mục</h3>
-                <ul class="category-list">
-                    <li class="category-item category-item--active">
-                        <a href="#" class="category-item_link">Áo Sweater</a>
-                    </li>
-                    <li class="category-item">
-                        <a href="#" class="category-item_link">Quần Joger</a>
-                    </li>
-                    <li class="category-item">
-                        <a href="#" class="category-item_link">Áo Polo</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row app__content">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="categoty__heading">
+                                <i class="categoty__heading-icon fas fa-list"></i>
+                                Danh mục</h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Áo Sweater</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Quần Joger</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Áo Polo</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn btn--primary">Phổ biến</button>
+                            <button class="home-filter__btn btn">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        Giá: Thấp đến cao
+                                    </li>
+                                    <li class="select-input__item">
+                                        Giá: Cao đến thấp
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">
