@@ -988,3 +988,117 @@
 .home-filter__page-btn--disabled .home-filter__page-icon{
     color: #ccc;
 }
+
+/* product item  */
+.home-product-item{
+    background-color: var(--white-color);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.home-product-item__img{
+    padding-top: 100%;
+    background-repeat: no-repeat;/* không lặp lại ảnh, lặp lại ảnh là thuộc tính mặc định của background-image*/
+    background-size: contain;/*cố gắn hiển thị toàn bộ bức ảnh,chiều nào dài hơn thì nó sẽ fix theo chiều đấy so với khung ảnh*/
+    background-position: center;/*trọng tâm ảnh luôn nằm giữa hình vuông(vùng chứa nó)*/
+}
+
+.home-product-item__name{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text--color);
+    line-height: 1.8rem;
+    margin: 10px 10px;
+    height: 3.6rem;/*vì muốn hiển thị 2 dòng nên ta đặt chiều cao của vùng chứa gấp đôi chiều cao của từng dòng text là 1.8rem*/
+    overflow: hidden;/*ẩn những đối tượng con chòi ra ngoài đối tượng cha(vùng chứa)*/
+    /* display: block;thêm block để trong trường hợp webkit-box không hỗ trợ trên trình duyệt người dùng */
+    display: -webkit-box;/*thuộc tính này chỉ hoạt động trên những trnh duyệt có core webkit thôi*/
+    -webkit-box-orient: vertical;/*muốn hướng của webkit-box theo chiều nào, vertical:thẳng đứng*/
+    -webkit-line-clamp: 2;/*giúp hạn chế content của một khối lại,nó set được số dòng hiển thị*/
+     
+    /* khi webkit không hoạt động với trình duyệt của ng dùng ta dùng cách bên dưới  */
+    /* white-space: nowrap;để cho nó k bị xuống dòng chữ nữa */
+    text-overflow: ellipsis;/*giúp ta tạo được dấu 3 chấm sau chữ,nhưng chỉ trog th 1 dòng*/
+
+
+}
+
+.home-product-item__price{
+    display: flex;
+    margin-left: 10px;
+    flex-wrap: wrap;/*khi element giá quá dài thì nó sẽ nhảy element đó xuoog dòng*/
+
+}
+
+.home-product-item__price-old{
+    font-size: 1.2rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.home-product-item__price-current{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-left: 6px;
+}
+
+.home-product-item__action{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 0 10px;
+}
+
+.home-product-item__like{
+    font-size: 1.3rem;
+    color: #999;
+}
+
+i.home-product-item__like-icon-fill{
+    color: var(--primary-color);
+    display: none;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-fill{
+    display: inline-block;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-empty{
+    display: none;
+}
+
+.home-product-item__rating{
+    font-size: 0.8rem;
+    color: #d5d5d5;
+}
+
+.home-product-item__star--gold{
+    color: var(--star-gold-color);
+}
+
+.home-product-item__origin{
+
+}
+
+.home-product-item__brand{
+
+}
+
+.home-product-item__address{
+
+}
+
+.home-product-item__favorite{
+
+}
+
+.home-product-item__sale-off{
+
+}
+
+.home-product-item__sale-off-percent{
+
+}
+
+.home-product-item__sale-label{
+
+}
