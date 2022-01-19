@@ -994,6 +994,7 @@
     background-color: var(--white-color);
     margin-top: 10px;
     border-radius: 2px;
+    position: relative;
 }
 
 .home-product-item__img{
@@ -1069,14 +1070,26 @@ i.home-product-item__like-icon-fill{
 .home-product-item__rating{
     font-size: 0.8rem;
     color: #d5d5d5;
+    margin-left: auto;/*khi này element sẽ tự đẩy cho xa item đối diện cho đến khhi nào nó chạm item tiếp theo thì thôi*/
 }
 
 .home-product-item__star--gold{
     color: var(--star-gold-color);
 }
 
-.home-product-item__origin{
+.home-product-item__sold{
+    font-size: 1.2rem;
+    color: var(--text--color);
+    margin-left: 6px;
+}
 
+.home-product-item__origin{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 0 10px;
+    color: rgba(0,0,0,.65);
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .home-product-item__brand{
@@ -1088,17 +1101,73 @@ i.home-product-item__like-icon-fill{
 }
 
 .home-product-item__favorite{
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    background-color: currentColor;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.home-product-item__favorite span{
+    color:var(--white-color) ;
+}
+
+.home-product-item__favorite::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+}
+
+.home-product-item__favorite i{
+    font-size: 0.9rem;
+    color:var(--white-color) ;
 
 }
 
 .home-product-item__sale-off{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 36px;
+    background-color: rgba(255, 216, 64, 0.9);
+    text-align: center;
+    padding: 3px 0;
 
 }
 
 .home-product-item__sale-off-percent{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    line-height: 1.3rem;
 
 }
 
-.home-product-item__sale-label{
+.home-product-item__sale-off-label{
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    color: var(--white-color);
+    font-weight: 400;
 
+}
+
+.home-product-item__sale-off::after{
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: -4px;
+    position: absolute;
+    border-color: transparent rgba(255,212,36,.9);
+    border-style: solid;
+    border-width: 0 20px 4px;
 }
