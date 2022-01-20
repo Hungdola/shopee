@@ -507,6 +507,7 @@
 }
 
 .header__cart-list{
+    z-index: 1;
     position: absolute;
     top: 140%;
     right: -3px;
@@ -526,12 +527,14 @@
     color: #b8b3b3;
     margin-left: 12px;
     font-weight: 400;
+
 }
 
 .header__cart-list-item{
     padding-left: 0;
     list-style: none;
-
+    max-height: 50vh;/*độ dài tối đa là 50% của độ rộng trình duyệt bất kì kích thước nào*/
+    overflow-y: auto;/*theo trục y lúc này nếu các element con mà nhiều hơn của cha thì nó sẽ hiện thanh scroll*/
 }
 
 .header__cart-item{
@@ -568,7 +571,15 @@
     font-weight: 400;
     color: var(--text--color);
     margin: 0;
-
+    line-height: 2rem;
+    max-height: 2rem;
+    overflow: hidden;
+    flex: 1;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-align: left;
 }
 
 .header__cart-item-price{
@@ -617,6 +628,8 @@
 .header__cart-view-cart{
     margin: 0 12px 12px 0;
     float: right;
+    padding-top: 10px;
+    
 }
 
 .header__cart-view-cart:hover{
@@ -801,6 +814,7 @@
 
 /* search history */
 .header__search-history{
+    z-index: 1;
     position: absolute;
     top: 106%;
     left: 0;
@@ -990,11 +1004,27 @@
 }
 
 /* product item  */
+.home-product{
+    margin-bottom: 10px;
+}
+
 .home-product-item{
     background-color: var(--white-color);
     margin-top: 10px;
     border-radius: 2px;
     position: relative;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 10%);
+    transition: transform linear 0.1s;
+    will-change: transform;
+    display: block;
+    text-decoration: none;
+}
+
+.home-product-item:hover{
+    box-shadow: 0 0.0625rem 20px 0 rgb(0 0 0 / 5%);
+    -webkit-transform: translateY(-0.1rem);
+    transform: translateY(-0.1rem);
+    z-index: 1;
 }
 
 .home-product-item__img{
@@ -1002,6 +1032,8 @@
     background-repeat: no-repeat;/* không lặp lại ảnh, lặp lại ảnh là thuộc tính mặc định của background-image*/
     background-size: contain;/*cố gắn hiển thị toàn bộ bức ảnh,chiều nào dài hơn thì nó sẽ fix theo chiều đấy so với khung ảnh*/
     background-position: center;/*trọng tâm ảnh luôn nằm giữa hình vuông(vùng chứa nó)*/
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
 }
 
 .home-product-item__name{
@@ -1090,6 +1122,7 @@ i.home-product-item__like-icon-fill{
     color: rgba(0,0,0,.65);
     font-size: 1.2rem;
     font-weight: 400;
+    padding-bottom: 10px;
 }
 
 .home-product-item__brand{
@@ -1142,6 +1175,7 @@ i.home-product-item__like-icon-fill{
     background-color: rgba(255, 216, 64, 0.9);
     text-align: center;
     padding: 3px 0;
+    border-top-right-radius: 2px;
 
 }
 
@@ -1170,4 +1204,9 @@ i.home-product-item__like-icon-fill{
     border-color: transparent rgba(255,212,36,.9);
     border-style: solid;
     border-width: 0 20px 4px;
+}
+
+/* pagination */
+.pagination__home{
+    margin: 30px 0 160px 0;
 }

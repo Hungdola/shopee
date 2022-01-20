@@ -188,6 +188,7 @@ frame, từng khung hình một */
     padding: 8px 14px 8px 16px;
     display: none;
     animation: fadeIn ease-in 0.15s;
+    z-index: 1;
 }
 
 .select-input__list::before{
@@ -209,4 +210,43 @@ frame, từng khung hình một */
 .select-input__item:hover{
     color: var(--primary-color);
     cursor: pointer;
+}
+
+/* pagination  */
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 10px;
+}
+
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+.pagination-item__link:hover{
+    color: var(--primary-color);
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover{
+    opacity: 0.9;
 }
